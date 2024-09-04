@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.12)
+project(ChickenCoop)
+set(CMAKE_CXX_STANDARD 20)
+set(COMPILE_DEFINITIONS -O2 -Wall)
+find_package(OpenCV REQUIRED)
+add_executable(ChickenCoop src/main.cpp)
+target_link_libraries(ChickenCoop ${OpenCV_LIBS})

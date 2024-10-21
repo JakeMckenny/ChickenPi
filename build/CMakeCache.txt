@@ -15,28 +15,24 @@
 ########################
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+CMAKE_ADDR2LINE:FILEPATH=/usr/bin/aarch64-linux-gnu-addr2line
 
 //Path to a program.
-CMAKE_AR:FILEPATH=/usr/bin/ar
+CMAKE_AR:FILEPATH=/usr/bin/aarch64-linux-gnu-ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
-//Enable/Disable color output during build.
-CMAKE_COLOR_MAKEFILE:BOOL=ON
-
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-12
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-ar-12
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-12
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-ranlib-12
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -53,16 +49,16 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-12
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-ar-12
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-12
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-ranlib-12
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -97,8 +93,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/pi/ChickenPi/build/CMakeFiles/pkgRedirects
@@ -107,10 +103,10 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/pi/ChickenPi/build/CMakeFiles/pkgR
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/usr/bin/ld
+CMAKE_LINKER:FILEPATH=/usr/bin/aarch64-linux-gnu-ld
 
-//Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
+//Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/ninja
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -133,13 +129,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/usr/bin/nm
+CMAKE_NM:FILEPATH=/usr/bin/aarch64-linux-gnu-nm
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
+CMAKE_OBJCOPY:FILEPATH=/usr/bin/aarch64-linux-gnu-objcopy
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+CMAKE_OBJDUMP:FILEPATH=/usr/bin/aarch64-linux-gnu-objdump
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -151,10 +147,10 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=ChickenPi
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+CMAKE_RANLIB:FILEPATH=/usr/bin/aarch64-linux-gnu-ranlib
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=/usr/bin/readelf
+CMAKE_READELF:FILEPATH=/usr/bin/aarch64-linux-gnu-readelf
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -204,13 +200,25 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/usr/bin/strip
+CMAKE_STRIP:FILEPATH=/usr/bin/aarch64-linux-gnu-strip
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//The directory containing a CMake configuration file for CURL.
+CURL_DIR:PATH=CURL_DIR-NOTFOUND
+
+//Path to a file.
+CURL_INCLUDE_DIR:PATH=/usr/include/aarch64-linux-gnu
+
+//Path to a library.
+CURL_LIBRARY_DEBUG:FILEPATH=CURL_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+CURL_LIBRARY_RELEASE:FILEPATH=/usr/lib/aarch64-linux-gnu/libcurl.so
 
 //Value Computed by CMake
 ChickenPi_BINARY_DIR:STATIC=/home/pi/ChickenPi/build
@@ -223,6 +231,15 @@ ChickenPi_SOURCE_DIR:STATIC=/home/pi/ChickenPi
 
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/opencv4
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//Path to a library.
+pkgcfg_lib_PC_CURL_curl:FILEPATH=/usr/lib/aarch64-linux-gnu/libcurl.so
 
 
 ########################
@@ -241,8 +258,6 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=25
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
-//ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
-CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -295,12 +310,10 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+CMAKE_GENERATOR:INTERNAL=Ninja
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
@@ -372,8 +385,62 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_DIR
+CURL_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_INCLUDE_DIR
+CURL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_LIBRARY_DEBUG
+CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CURL_LIBRARY_RELEASE
+CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//Details about finding CURL
+FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/aarch64-linux-gnu/libcurl.so][/usr/include/aarch64-linux-gnu][c ][v7.88.1()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.6.0()]
+PC_CURL_CFLAGS:INTERNAL=-I/usr/include/aarch64-linux-gnu
+PC_CURL_CFLAGS_I:INTERNAL=
+PC_CURL_CFLAGS_OTHER:INTERNAL=
+PC_CURL_FOUND:INTERNAL=1
+PC_CURL_INCLUDEDIR:INTERNAL=/usr/include/aarch64-linux-gnu
+PC_CURL_INCLUDE_DIRS:INTERNAL=/usr/include/aarch64-linux-gnu
+PC_CURL_LDFLAGS:INTERNAL=-L/usr/lib/aarch64-linux-gnu;-lcurl
+PC_CURL_LDFLAGS_OTHER:INTERNAL=
+PC_CURL_LIBDIR:INTERNAL=/usr/lib/aarch64-linux-gnu
+PC_CURL_LIBRARIES:INTERNAL=curl
+PC_CURL_LIBRARY_DIRS:INTERNAL=/usr/lib/aarch64-linux-gnu
+PC_CURL_LIBS:INTERNAL=
+PC_CURL_LIBS_L:INTERNAL=
+PC_CURL_LIBS_OTHER:INTERNAL=
+PC_CURL_LIBS_PATHS:INTERNAL=
+PC_CURL_MODULE_NAME:INTERNAL=libcurl
+PC_CURL_PREFIX:INTERNAL=/usr
+PC_CURL_STATIC_CFLAGS:INTERNAL=-I/usr/include/aarch64-linux-gnu
+PC_CURL_STATIC_CFLAGS_I:INTERNAL=
+PC_CURL_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_CURL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/aarch64-linux-gnu
+PC_CURL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/aarch64-linux-gnu;-lcurl;-lnghttp2;-lidn2;-lrtmp;-lssh2;-lssh2;-lpsl;-lssl;-lcrypto;-lssl;-lcrypto;-lgssapi_krb5;-llber;-lldap;-llber;-lzstd;-lbrotlidec;-lz
+PC_CURL_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_CURL_STATIC_LIBDIR:INTERNAL=
+PC_CURL_STATIC_LIBRARIES:INTERNAL=curl;nghttp2;idn2;rtmp;ssh2;ssh2;psl;ssl;crypto;ssl;crypto;gssapi_krb5;lber;ldap;lber;zstd;brotlidec;z
+PC_CURL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/aarch64-linux-gnu
+PC_CURL_STATIC_LIBS:INTERNAL=
+PC_CURL_STATIC_LIBS_L:INTERNAL=
+PC_CURL_STATIC_LIBS_OTHER:INTERNAL=
+PC_CURL_STATIC_LIBS_PATHS:INTERNAL=
+PC_CURL_VERSION:INTERNAL=7.88.1
+PC_CURL_libcurl_INCLUDEDIR:INTERNAL=
+PC_CURL_libcurl_LIBDIR:INTERNAL=
+PC_CURL_libcurl_PREFIX:INTERNAL=
+PC_CURL_libcurl_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+__pkg_config_arguments_PC_CURL:INTERNAL=QUIET;libcurl
+__pkg_config_checked_PC_CURL:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_PC_CURL_curl
+pkgcfg_lib_PC_CURL_curl-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=AsynchDNS;GSS-API;HSTS;HTTP2;HTTPS-proxy;IDN;IPv6;Kerberos;Largefile;NTLM;NTLM_WB;PSL;SPNEGO;SSL;TLS-SRP;UnixSockets;alt-svc;brotli;libz;threadsafe;zstd
 
